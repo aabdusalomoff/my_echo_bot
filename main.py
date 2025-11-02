@@ -2,12 +2,11 @@ import telebot
 from dotenv import load_dotenv
 import os
 
-# Загружаем токен из .env
 load_dotenv()
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TOKEN = os.getenv("TOKEN")
 
 if not TOKEN:
-    raise ValueError("❌ TELEGRAM_BOT_TOKEN не найден в .env faylda")
+    raise ValueError("❌ TOKEN не найден в .env faylda")
 
 bot = telebot.TeleBot(TOKEN)
 
